@@ -1,0 +1,51 @@
+body {
+	--black_raw: 0, 0, 0;
+	--white_raw: 217, 217, 217;
+	--lite_raw: 207, 214, 222;
+	--drk_raw: 38,38,42;
+	--neon_raw: 225, 204, 97;
+	--purple_raw: 39, 28, 78;
+	--lt_purple_raw: 168, 137, 233;
+	--lt_blue_raw: 158, 189, 225;
+
+	/*** Base Pallet ***/
+	--color_1_raw: 209,227,239;
+	--color_2_raw: 135,143,215; 
+	--color_3_raw: 255,255,115; 
+	--color_4_raw: 197,157,62; 
+	--color_5_raw: 255,192,183; 
+	--color_6_raw: 205,3,27; 
+	--color_7_raw: 129,203,248; 
+	--color_8_raw: 1,166,248; 
+	--color_9_raw: 255,96,0; 
+	--color_10_raw: 61,172,31;
+
+	--color_lite_raw: 244,242,235;
+	--color_dark_raw: 13,12,10;
+	--color_grey_raw: 108,108,116;
+	
+	
+	/** Shawn of the Dead **/
+	--sotd_red_raw: 132,0,18;
+	--sotd_maroon_raw: 78,25,34;
+	--sotd_orange_raw: 178,103,64;
+	--sotd_mustard_raw: 139,123,37;
+	--sotd_sky_raw: 185,211,227;
+	--sotd_blue_raw: 95,129,192;
+
+	/** Star Wars - New Hope **/
+	--sw_red_raw: 164,37,21;
+	--sw_mint_raw: 151,174,152;
+	--sw_blue_raw: 131,158,178;
+	--sw_violet_raw: 134,117,138;
+
+
+	--cb_drk-red_raw: 143,17,24;
+	--cb_tan_raw: 183,155,129;
+	--cb_drk-green_raw: 91,109,78;
+	--cb_green_raw: 85,159,127;
+	--cb_slate_raw: 92,100,114;
+
+
+
+}
