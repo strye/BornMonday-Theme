@@ -150,6 +150,19 @@ body {
 	--accent-s: 75%;
 	--accent-l: 42%;
 
+
+
+	/*** Pixil Sizing ***/
+	--micro: 70px;
+	--tiny: 100px;
+	--small: 200px;
+	--small-med: 300px;
+	--med-small: 400px;
+	--medium: 500px;
+	--med-tall: 600px;
+	--tall: 700px;
+  
+
 }
 .theme-dark {
 	/*** Set Background ***/
@@ -361,6 +374,77 @@ div.hr.cm-line {
 
 
 
+/***********************************************/
+/*** Image Options ****************************/
+/*********************************************/
+img[alt][alt]:not([alt*=relative])[alt*=hmicro] {
+	height: var(--micro);
+}
+img[alt][alt]:not([alt*=relative])[alt*=htiny] {
+	height: var(--tiny);
+}
+img[alt][alt]:not([alt*=relative])[alt*=hsmall] {
+	height: var(--small);
+}
+img[alt][alt]:not([alt*=relative])[alt*=hs-med] {
+	height: var(--small-med);
+}
+img[alt][alt]:not([alt*=relative])[alt*=hm-sm] {
+	height: var(--med-small);
+}
+img[alt][alt]:not([alt*=relative])[alt*=hmed] {
+	height: var(--medium);
+}
+img[alt][alt]:not([alt*=relative])[alt*=hm-tl] {
+	height: var(--med-tall);
+}
+img[alt][alt]:not([alt*=relative])[alt*=htall] {
+	height: var(--tall);
+}
+img[alt][alt]:not([alt*=relative])[alt*=hfull] {
+	height: 100%;
+}
+img[alt][alt]:not([alt*=relative])[alt*=wmicro] {
+	width: var(--micro);
+}
+img[alt][alt]:not([alt*=relative])[alt*=wtiny] {
+	width: var(--tiny);
+}
+img[alt][alt]:not([alt*=relative])[alt*=wsmall] {
+	width: var(--small);
+}
+img[alt][alt]:not([alt*=relative])[alt*=ws-med] {
+	width: var(--small-med);
+}
+img[alt][alt]:not([alt*=relative])[alt*=wm-sm] {
+	width: var(--med-small);
+}
+img[alt][alt]:not([alt*=relative])[alt*=wmed] {
+	width: var(--medium);
+}
+img[alt][alt]:not([alt*=relative])[alt*=wm-tl] {
+	width: var(--med-tall);
+}
+img[alt][alt]:not([alt*=relative])[alt*=wtall] {
+	width: var(--tall);
+}
+img[alt][alt]:not([alt*=relative])[alt*=wfull] {
+	width: 100%;
+}
+
+  
+img:is([alt*=flip-x],
+[alt*=flip-horizontal]) {
+  transform: scale(-1, 1);
+}
+img:is([alt*=flip-y],
+[alt*=flip-vertical]) {
+  transform: scale(1, -1);
+}
+img:is([alt*=flip-xy],
+[alt*=flip-vertical-horizontal]) {
+  transform: scale(-1, -1);
+}
 
 
 /***********************************************/
