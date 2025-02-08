@@ -21,6 +21,7 @@ body {
 	--lt_blue: rgb(var(--lt_blue_raw));
 
 	--sotd_red: rgb(132,0,18);
+	--sotd_lt_orange: rgb(199,142,42);
 	--sotd_blue: rgb(95,129,192);
 	--sotd_mustard: rgb(139,123,37);
 	--sotd_gray: rgb(112,109,109);
@@ -58,6 +59,7 @@ body {
 	/*** Text-Font Settings ***/
 	--text-normal: var(--white);
 	--font-monospace-default: Consolas, Menlo, SFMono-Regular, "Roboto Mono", 'Source Code Pro', monospace;
+	--text-highlight-bg: rgba(var(--lt_purple_raw),0.3);
 
 	/* Tabs */
 	--tab-background-active: var(--background-primary);
@@ -67,7 +69,7 @@ body {
 
 
 	/* File layout -- Set Line Width */
-	--file-line-width: 800px;
+	--file-line-width: 900px;
 	--file-folding-offset: 24px;
 	--file-margins: var(--size-4-8);
 
@@ -329,6 +331,8 @@ div.hr.cm-line {
 	--h5-size: 0.9em;
 	--h6-size: 0.8em;
 
+	--font_sz: 0.8em;
+
 	--h4-style: none;
 	--h4-color: var(--hgd);
 
@@ -364,13 +368,207 @@ div.hr.cm-line {
 	background: var(--hgd);
 }
 
+/*** Content styles ***/
+.dashboard .cm-content .cm-line, .dashboard p {
+	padding-bottom: 0.96em;
+	line-height: 1.32em;
+	text-align: left;
+	font-size: var(--font_sz);
+}
+
+/*** Table styles ***/
+.dashboard .dataview td,
+.dashboard .dataview th {
+	font-size: var(--font_sz);
+}
+
 /*** List styles ***/
+.dashboard ul li,
 .dashboard .cm-content .HyperMD-list-line {
+	color: var(--sw_mint);
+	font-size: var(--font_sz);
+	font-variant: small-caps;
+	padding-bottom: 0.0em;
+}
+.dashboard ul li {
+	padding-left: var(--font_sz);
+}
+
+
+/***********************************************/
+/*** Outline Styles *************************/
+/*********************************************/
+.outline {
+	/* --hga: var(--lt_purple); */
+	--hgb: var(--lt_blue);
+	--hgc: var(--lt_purple);
+
+	
+	/*** Text-Font Settings ***/
+	--text-normal: var(--white);
+
+	/*** HEADER STYLES ***/
+	--h1-color: var(--hga);
+	--h2-color: var(--hgb);
+	--h3-color: var(--hgd);
+	--h4-color: var(--hgd);
+	--h5-color: var(--hgc);
+	--h6-color: var(--hgc);
+
+	--h1-size: 1.2em;
+	--h2-size: 1.0em;
+	--h3-size: 1.0em;
+	--h4-size: 0.9em;
+	--h5-size: 0.9em;
+	--h6-size: 0.8em;
+
+	--h4-style: none;
+
+}
+
+
+.outline .cm-content .cm-line, .outline p {
+	padding-bottom: 0.96em;
+	line-height: 1.32em;
+	text-align: left;
+}
+.outline .HyperMD-quote {
+	padding-bottom: 0.42em !important;
+	line-height: 1.20em;
+	text-align: left;
+}
+
+/*** HEADER STYLES ***/
+.outline .cm-content .HyperMD-header {
+	padding-top: 0.42em;
+	padding-bottom: 0.24em !important;
+	line-height: 1.1em;
+	text-align: left;
+}
+.outline .HyperMD-header-1:after, .outline h1:after {
+	background: linear-gradient(to right, rgba(var(--cb_slate_raw), 0.84) 0 60%, rgba(var(--cb_slate_raw), 0.25));
+}
+
+.outline .HyperMD-header-3:after, .markdown-preview-view h3:after {
+	background: var(--hgd);
+}
+.outline .HyperMD-header-5:after, .markdown-preview-view h5:after {
+	background: var(--hgc);
+}
+
+/*** List styles ***/
+.outline .cm-content .HyperMD-list-line {
 	color: var(--sw_mint);
 	font-size: 0.8em;
 	font-variant: small-caps;
 	padding-bottom: 0.0em;
 }
+
+
+.bm-panel {
+	/* --hga: var(--lt_purple); */
+	--hgb: var(--lt_blue);
+	--hgc: var(--lt_purple);
+
+	
+	/*** Text-Font Settings ***/
+	--text-normal: var(--white);
+
+	/*** HEADER STYLES ***/
+	--h1-color: var(--hgb);
+	--h2-color: var(--hgb);
+	--h3-color: var(--hgd);
+	--h4-color: var(--hgd);
+	--h5-color: var(--hgc);
+	--h6-color: var(--hgc);
+
+	--h1-size: 0.9em;
+	--h2-size: 0.8em;
+	--h3-size: 0.8em;
+	--h4-size: 0.7em;
+	--h5-size: 0.7em;
+	--h6-size: 0.6em;
+
+	--h4-style: none;
+
+	--font_sz: 0.6em
+
+}
+.bm-panel .cm-content .HyperMD-header {
+	padding-top: 0.84em;
+	padding-bottom: 0.24em !important;
+	line-height: 1.1em;
+	text-align: left;
+}
+.bm-panel .HyperMD-header-1:after, .outline h1:after {
+	background: linear-gradient(to right, rgba(var(--cb_slate_raw), 0.84) 0 60%, rgba(var(--cb_slate_raw), 0.25));
+}
+
+.bm-panel .cm-content .cm-line, .bm-panel p {
+	padding-bottom: 0.96em;
+	line-height: 1.32em;
+	text-align: left;
+	font-size: var(--font_sz);
+}
+.bm-panel .HyperMD-quote {
+	padding-bottom: 0.42em !important;
+	line-height: 1.20em;
+	text-align: left;
+}
+
+
+
+.bm-panel .dataview td,
+.bm-panel .dataview th {
+	font-size: var(--font_sz);
+}
+.bm-panel .block-language-dataviewjs {
+	--h1-size: 0.7em;
+	--h2-size: 0.65em;
+	--h3-size: 0.65em;
+}
+.bm-panel .block-language-dataviewjs h1 {
+	margin: 8px 0;
+}
+.bm-panel .block-language-dataviewjs tbody tr {
+	line-height: 1;
+}
+
+.bm-panel .block-language-dataview ul {
+	margin: 4px 0;
+	padding-left: 24px;
+}
+
+.bm-panel ul li {
+	color: var(--sw_mint);
+	font-size: var(--font_sz);
+	font-variant: small-caps;
+	padding-bottom: 0.0em;
+}
+
+.bm-panel .HyperMD-list-line {
+	font-size: var(--font_sz);
+	font-variant: small-caps;
+	padding-bottom: 0.2em !important;
+}
+
+.bm-panel .inline-title, 
+.bm-panel .cm-gutters,
+.bm-panel .tasks-count,
+.bm-panel .bwc-section-count {
+	display: none;
+}
+
+
+.bm-panel .task-list-item {
+	margin-inline-start: 44px !important;
+}
+.bm-panel .task-list-item-checkbox {
+	width: 1.3em;
+	height: 1.3em;
+	margin-inline-end: 8px !important;
+}
+
 
 
 
@@ -458,6 +656,8 @@ img:is([alt*=flip-xy],
   input[data-task="!"]:checked,
   input[data-task="-"]:checked,
   input[data-task="<"]:checked,
+  input[data-task="H"]:checked,
+  input[data-task="m"]:checked,
   input[data-task="l"]:checked,
   input[data-task="*"]:checked,
   input[data-task="I"]:checked,
@@ -473,6 +673,8 @@ img:is([alt*=flip-xy],
   li[data-task="!"] > input:checked,
   li[data-task="-"] > input:checked,
   li[data-task="<"] > input:checked,
+  li[data-task="H"] > input:checked,
+  li[data-task="m"] > input:checked,
   li[data-task="l"] > input:checked,
   li[data-task="*"] > input:checked,
   li[data-task="I"] > input:checked,
@@ -488,6 +690,8 @@ img:is([alt*=flip-xy],
   li[data-task="!"] > p > input:checked,
   li[data-task="-"] > p > input:checked,
   li[data-task="<"] > p > input:checked,
+  li[data-task="H"] > p > input:checked,
+  li[data-task="m"] > p > input:checked,
   li[data-task="l"] > p > input:checked,
   li[data-task="*"] > p > input:checked,
   li[data-task="I"] > p > input:checked,
@@ -508,7 +712,9 @@ img:is([alt*=flip-xy],
 	mask-position: 50% 50%;
 	-webkit-mask-size: var(--checkbox-icon);
 	-webkit-mask-position: 50% 50%; };
-  
+
+
+	
   /* [>] Forwarded */
   input[data-task=">"]:checked,
   li[data-task=">"] > input:checked,
@@ -524,13 +730,35 @@ img:is([alt*=flip-xy],
   input[data-task="<"]:checked,
   li[data-task="<"] > input:checked,
   li[data-task="<"] > p > input:checked {
-	color: var(--text-faint);
+	color: var(--text-faint); /* color-red color-orange */
 	mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z' clip-rule='evenodd' /%3E%3C/svg%3E");
 	mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z' clip-rule='evenodd' /%3E%3C/svg%3E");
 	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z' clip-rule='evenodd' /%3E%3C/svg%3E");
 	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z' clip-rule='evenodd' /%3E%3C/svg%3E"); }
-  
-  /* [?] Question */
+
+
+  /* [H] Hold Task */
+  input[data-task="H"]:checked,
+  li[data-task="H"] > input:checked,
+  li[data-task="H"] > p > input:checked {
+	color: rgb(178,103,64);
+	mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>'); 
+	-webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>'); 
+  }
+
+
+  /* [m] Schedule */
+  input[data-task="m"]:checked,
+  li[data-task="m"] > input:checked,
+  li[data-task="m"] > p > input:checked {
+	color: var(--sotd_lt_orange); /* color-red color-orange sotd_lt_orange */
+	mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z' clip-rule='evenodd' /%3E%3C/svg%3E");
+	mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z' clip-rule='evenodd' /%3E%3C/svg%3E");
+	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z' clip-rule='evenodd' /%3E%3C/svg%3E");
+	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z' clip-rule='evenodd' /%3E%3C/svg%3E"); }
+
+
+	/* [?] Question */
   input[data-task="?"]:checked,
   li[data-task="?"] > input:checked,
   li[data-task="?"] > p > input:checked {
